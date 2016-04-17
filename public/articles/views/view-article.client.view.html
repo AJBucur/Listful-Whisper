@@ -1,5 +1,7 @@
 <section data-ng-controller="ArticlesController" data-ng-init="findOne()">
     <h1 data-ng-bind="article.title"></h1>
+    <a href="/">Back to Home</a>
+    <a href="/#!/articles/">Back to articles</a>
     <div data-ng-show="authentication.user._id == article.creator._id">
         <a href="/#!/articles/{{article._id}}/edit">edit</a>
         <a href="#" data-ng-click="delete();">delete</a>
