@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
     
-var CourseSchema = new Schema({
+var TranscriptSchema = new Schema({
     created: {
         type: Date,
         default: Date.now
@@ -17,11 +17,18 @@ var CourseSchema = new Schema({
         default: '',
         trim: true
     },
-   
+    grade: {
+        type: String,
+        default:''
+    },
+    teacher: {
+        type: String,
+        trim: true      
+    },
     creator: {
         type: Schema.ObjectId,
         ref: 'User'
     }
 });
 
-mongoose.model('Course', CourseSchema);
+mongoose.model('Transcript', TranscriptSchema);

@@ -23,6 +23,11 @@ var UserSchema = new Schema({
             }, 'Password should be longer'
         ]
     },
+    userType:{
+        type: String,
+        lowercase: true,
+        default: ''
+    }
     salt: {
         type: String
     },
