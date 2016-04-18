@@ -12,9 +12,9 @@ var ArticleSchema = new Schema({
         trim: true,
         required: 'Title cannot be blank'
     },
-    grade: {
+    content: {
         type: String,
-        default: 'N/A',
+        default: '',
         trim: true
     },
     creator: {

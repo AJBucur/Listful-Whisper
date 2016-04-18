@@ -6,16 +6,9 @@ var TranscriptSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    title: {
-        type: String,
-        default: '',
-        trim: true,
-        required: 'Title cannot be blank'
-    },
-    content: {
-        type: String,
-        default: '',
-        trim: true
+    courses: {
+        type: Schema.ObjectId
+        ref: 'Course'
     },
     grade: {
         type: String,

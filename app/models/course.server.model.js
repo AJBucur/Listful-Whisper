@@ -17,7 +17,6 @@ var CourseSchema = new Schema({
         default: '',
         trim: true
     },
-   
     creator: {
         type: Schema.ObjectId,
         ref: 'User'

@@ -27,7 +27,7 @@ var UserSchema = new Schema({
         type: String,
         lowercase: true,
         default: ''
-    }
+    },
     salt: {
         type: String
     },
