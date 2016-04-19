@@ -1,0 +1,17 @@
+<section data-ng-controller="CoursesController" data-ng-init="findOne()">
+    <h1 data-ng-bind="course.title"></h1>
+    <a href="/">Back to Home</a>
+    <a href="/#!/courses/">Back to Courses</a>
+    <div data-ng-show="authentication.user._id == course.creator._id">
+        <a href="/#!/courses/{{course._id}}/edit">edit</a>
+        <a href="#" data-ng-click="delete();">delete</a>
+    </div>
+    <small>
+        <br />
+        <em>Posted on</em>
+        <em data-ng-bind="course.created | date:'mediumDate'"></em>
+        <em>by</em>
+        <em data-ng-bind="course.creator.fullName"></em>
+    </small>    
+    <p data-ng-bind="course.content"></p>
+</section>

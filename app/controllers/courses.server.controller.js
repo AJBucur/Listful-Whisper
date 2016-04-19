@@ -40,14 +40,14 @@ exports.list = function(req, res) {
         });
 };
 
-exports.articleByID = function(req, res, next, id) {
-    Article.findById(id).populate('creator', 
+exports.courseByID = function(req, res, next, id) {
+    Course.findById(id).populate('creator', 
     'firstName lastName fullName')
-    .exec(function(err, article) {
+    .exec(function(err, course) {
         if (err) return next(err);
-        if (!article) return next(new Error('Failed to load article '
+        if (!course) return next(new Error('Failed to load course '
             + id));
-        req.article = article;
+        req.course = course;
         next();
     });
 };

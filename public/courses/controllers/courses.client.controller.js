@@ -9,7 +9,7 @@ angular.module('courses').controller('CoursesController', ['$scope',
                 content: this.content
             });
 
-            article.$save(function(response) {
+            course.$save(function(response) {
                 $location.path('courses/' + response._id);
             }, function(errorResponse) {
                 $scope.error = errorResponse.data.message;

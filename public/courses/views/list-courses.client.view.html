@@ -1,0 +1,16 @@
+<section data-ng-controller="CoursesController" data-ng-init="find()">
+    <h1>Courses</h1>
+    <a href="/">Back to Home</a>
+    <a href="/#!/courses/create">Create a new Course</a>
+    <ul>
+        <li data-ng-repeat="course in courses">
+            <a data-ng-href="#!/courses/{{course._id}}" data-ng-bind="course.title"></a>
+            <br>
+            <small data-ng-bind="course.created | date:'medium'"></small>
+            <small>/</small>
+            <small data-ng-bind="course.creator.fullName"></small>
+            <p data-ng-bind="course.content"></p>
+        </li>
+    </ul>
+    <div data-ng-hide="!courses || courses.length">No courses posted yet, why don't you <a href="/#!/courses/create">create one</a>?</div>
+</section>

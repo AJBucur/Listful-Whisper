@@ -6,10 +6,10 @@ var TranscriptSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    courses: {
-        type: Schema.ObjectId
+    courses: [{
+        type: Schema.ObjectId,
         ref: 'Course'
-    },
+    }],
     grade: {
         type: String,
         default:''
