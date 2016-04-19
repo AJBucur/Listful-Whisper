@@ -1,9 +1,9 @@
 <section data-ng-controller="CoursesController" data-ng-init="find()">
-    <h1>My Courses</h1>
+    <h1>Courses</h1>
     <a href="/">Back to Home</a>
     <a href="/#!/courses/create">Create a new Course</a>
     <ul>
-        <li data-ng-repeat="course in courses" data-ng-show="authentication.user._id == course.creator._id">
+        <li data-ng-repeat="course in courses">
             <a data-ng-href="#!/courses/{{course._id}}" data-ng-bind="course.title"></a>
             <br>
             <small data-ng-bind="course.created | date:'medium'"></small>

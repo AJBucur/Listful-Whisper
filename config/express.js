@@ -40,5 +40,7 @@ module.exports = function(){
     require ('../app/routes/users.server.routes.js')(app);
     require ('../app/routes/articles.server.routes.js')(app);
     require ('../app/routes/courses.server.routes.js')(app);
+    require ('../app/routes/transcripts.server.routes.js')(app);
+    
     return app;
 };

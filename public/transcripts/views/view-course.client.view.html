@@ -3,13 +3,12 @@
     <a href="/">Back to Home</a>
     <a href="/#!/courses/">Back to Courses</a>
     <div data-ng-show="authentication.user._id == course.creator._id">
-        <a href="/#!/courses/{{course._id}}/edit">Edit Content</a>
-        <a href="#" data-ng-click="delete();">Delete</a>
-        <a href="/#!/courses/{{course._id}}/listing">Course Listing</a>
+        <a href="/#!/courses/{{course._id}}/edit">edit</a>
+        <a href="#" data-ng-click="delete();">delete</a>
     </div>
     <small>
         <br />
-        <em>Created on</em>
+        <em>Posted on</em>
         <em data-ng-bind="course.created | date:'mediumDate'"></em>
         <em>by</em>
         <em data-ng-bind="course.creator.fullName"></em>

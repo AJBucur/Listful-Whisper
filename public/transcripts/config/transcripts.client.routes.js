@@ -1,8 +1,11 @@
-angular.module('courses').config(['$routeProvider',
+angular.module('transcripts').config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
-            when('/courses', {
-                templateUrl: 'courses/views/list-courses.client.view.html'
+            when('/transcripts', {
+                templateUrl: 'transcripts/views/list-courses.client.view.html'
+            }).
+            when('/transcripts/courses', {
+                templateUrl: 'transcripts/views/list-courses.client.view.html'
             }).
             when('/courses/create', {
                 templateUrl: 'courses/views/create-course.client.view.html'
@@ -12,9 +15,7 @@ angular.module('courses').config(['$routeProvider',
             }).
             when('/courses/:courseId/edit', {
                 templateUrl: 'courses/views/edit-course.client.view.html'
-            }).
-            when('/courses/:courseId/listing', {
-                templateUrl: 'courses/views/course-listing.client.view.html'
             });
+            
     }
 ]);
