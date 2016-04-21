@@ -12,10 +12,11 @@ var TranscriptSchema = new Schema({
     },
     grade: {
         type: String,
-        default:''
+        default:'N/A'
     },
     teacher: {
         type: String,
+        default:'N/A',
         trim: true      
     },
     creator: {

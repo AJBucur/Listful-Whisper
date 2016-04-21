@@ -1,34 +1,34 @@
 angular.module('transcripts').controller('TranscriptsController', ['$scope',
-    '$routeParams', '$location', 'Authentication', 'Courses',
-    function($scope, $routeParams, $location, Authentication, Courses) {
+    '$routeParams', '$location', 'Authentication', 'Transcripts',
+    function($scope, $routeParams, $location, Authentication, Transcripts) {
         $scope.authentication = Authentication;
 
         $scope.create = function() {
-            var course = new Courses({
-                title: this.title,
-                content: this.content
+            var transcript = new Transcripts({
+                //title: this.title,
+                //content: this.content
             });
 
-            course.$save(function(response) {
-                $location.path('courses/' + response._id);
+            transcript.$save(function(response) {
+                $location.path('transcripts/' + response._id);
             }, function(errorResponse) {
                 $scope.error = errorResponse.data.message;
             });
         };
 
         $scope.find = function() {
-            $scope.courses = Courses.query();
+            $scope.transcripts = Transcripts.query();
         };
 
         $scope.findOne = function() {
-            $scope.course = Courses.get({
-                courseId: $routeParams.courseId
+            $scope.transcript = Transcripts.get({
+                transcriptId: $routeParams.transcriptId
             });
         };
 
         $scope.update = function() {
-            $scope.course.$update(function() {
-                $location.path('courses/' + $scope.course._id);
+            $scope.transcript.$update(function() {
+                $location.path('transcripts/' + $scope.transcript._id);
             }, function(errorResponse) {
                 $scope.error = errorResponse.data.message;
             });

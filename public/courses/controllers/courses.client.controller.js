@@ -25,6 +25,12 @@ angular.module('courses').controller('CoursesController', ['$scope',
                 courseId: $routeParams.courseId
             });
         };
+        
+         $scope.listing = function() {
+            $scope.course = Courses.get({
+                courseId: $routeParams.courseId
+            });
+        };
 
         $scope.update = function() {
             $scope.course.$update(function() {

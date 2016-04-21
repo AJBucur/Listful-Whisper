@@ -1,1 +1,1 @@
-angular.module('transcripts', ['courses']);
+angular.module('transcripts', []);
