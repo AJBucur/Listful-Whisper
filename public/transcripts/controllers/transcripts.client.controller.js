@@ -1,6 +1,6 @@
 angular.module('transcripts').controller('TranscriptsController', ['$scope',
-    '$routeParams', '$location', 'Authentication', 'Transcripts',
-    function($scope, $routeParams, $location, Authentication, Transcripts) {
+    '$routeParams', '$location', 'Authentication', 'Transcripts', 'Courses',
+    function($scope, $routeParams, $location, Authentication, Transcripts, Courses) {
         $scope.authentication = Authentication;
 
         $scope.create = function() {

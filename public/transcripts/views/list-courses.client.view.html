@@ -1,10 +1,10 @@
 <section data-ng-controller="CoursesController" data-ng-init="find()">
     <h1>Courses</h1>
     <a href="/">Back to Home</a>
-    <a href="/#!/courses/create">Create a new Course</a>
+    <a href="/#!/transcripts/transcript">View transcripts</a>
     <ul>
         <li data-ng-repeat="course in courses">
-            <a data-ng-href="#!/courses/{{course._id}}" data-ng-bind="course.title"></a>
+            <a data-ng-href="#!/transcripts/courses/{{course._id}}" data-ng-bind="course.title"></a>
             <br>
             <small data-ng-bind="course.created | date:'medium'"></small>
             <small>/</small>

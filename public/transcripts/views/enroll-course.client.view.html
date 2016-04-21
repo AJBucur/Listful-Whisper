@@ -1,0 +1,14 @@
+<section data-ng-controller="TranscriptsController">
+    <h1>New Course Outline</h1>
+    <a href="/">Back to Home</a>
+     
+    <form data-ng-submit="create()" novalidate> 
+        
+        <div>
+            <input type="submit" value="Enroll">
+        </div>
+        <div data-ng-show="error">
+            <strong data-ng-bind="error"></strong>
+        </div>
+    </form>
+</section>

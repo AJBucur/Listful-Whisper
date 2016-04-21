@@ -14,11 +14,6 @@ var TranscriptSchema = new Schema({
         type: String,
         default:'N/A'
     },
-    teacher: {
-        type: String,
-        default:'N/A',
-        trim: true      
-    },
     creator: {
         type: Schema.ObjectId,
         ref: 'User'

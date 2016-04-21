@@ -1,0 +1,16 @@
+<section data-ng-controller="TranscriptsController" data-ng-init="find()">
+    <h1>Transcripts</h1>
+    <a href="/">Back to Home</a>
+    <a href="/#!/courses/create">Create a new Course</a>
+    <ul>
+        <li data-ng-repeat="transcript in transcripts" >
+            <a data-ng-href="#!/transcripts/{{transcript._id}}" data-ng-bind="transcripts.course._id"></a>
+            <br>
+            <small data-ng-bind="transcript.created | date:'medium'"></small>
+            <small>/</small>
+            <small data-ng-bind="transcript.creator.fullName"></small>
+            <p data-ng-bind="transcript.grade"></p>
+        </li>
+    </ul>
+    <div data-ng-hide="!transcripts || transcripts.length">You are not enrolled in any courses currently <a href="/#!/courses/create">create one</a></div>
+</section>
