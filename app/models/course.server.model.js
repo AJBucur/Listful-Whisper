@@ -17,6 +17,16 @@ var CourseSchema = new Schema({
         default: '',
         trim: true
     },
+    students: [{
+        student: {
+            type: Schema.ObjectId,
+            ref: 'User'
+        },
+        grade: {
+            type: String,
+            default: 'N/A'
+        }
+    }],
     creator: {
         type: Schema.ObjectId,
         ref: 'User'

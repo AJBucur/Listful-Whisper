@@ -25,14 +25,19 @@ angular.module('courses').controller('CoursesController', ['$scope',
                 courseId: $routeParams.courseId
             });
         };
-        
-         $scope.listing = function() {
-            $scope.course = Courses.get({
-                courseId: $routeParams.courseId
+
+        $scope.update = function() {
+            $scope.course.$update(function() {
+                $location.path('courses/' + $scope.course._id);
+            }, function(errorResponse) {
+                $scope.error = errorResponse.data.message;
             });
         };
 
-        $scope.update = function() {
+        $scope.addStudent = function() {
+            
+            
+            
             $scope.course.$update(function() {
                 $location.path('courses/' + $scope.course._id);
             }, function(errorResponse) {

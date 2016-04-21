@@ -7,6 +7,9 @@
         <a href="#" data-ng-click="delete();">Delete</a>
         <a href="/#!/courses/{{course._id}}/listing">Course Listing</a>
     </div>
+    <div data-ng-show="authentication.user.userType == 'student'">
+        <a href="/#!/courses/{{course._id}}/enroll">Enroll in Course</a>
+    </div>
     <small>
         <br />
         <em>Created on</em>

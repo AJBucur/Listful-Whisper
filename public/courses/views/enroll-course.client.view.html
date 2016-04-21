@@ -1,0 +1,15 @@
+<section data-ng-controller="CoursesController" data-ng-init="findOne()">
+    <h1 data-ng-bind="course.title"></h1>
+    <a href="/">Back to Home</a>
+    <a href="/#!/courses/">Back to Courses</a>
+    
+     <form data-ng-submit="update()" novalidate>
+         <div>
+            <input type="submit" value="Enroll into"> 
+            <em data-ng-bind="course.title"></em>?
+        </div>
+        <div data-ng-show="error">
+            <strong data-ng-bind="error"></strong>
+        </div>
+     </form>
+</section>    
